@@ -6,6 +6,8 @@ Smtplib
 SSL  
 Selenium  
 BS4  
+Alternatively just ```pip install -r requirements.txt``` if you want to install everything needed  
+
 ## Variables that need to be populated
 There will be a need to have a Costco Account to access the price of the PS5 bundle. If you care not for the Costco notification, you can go ahead and delete that section of the code, as I have clearly commented the beginning of that section with START COSTCO.  
   
