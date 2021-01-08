@@ -74,7 +74,7 @@ url_sony = 'https://direct.playstation.com/en-us/consoles/console/playstation5-c
 
 DRIVER_PATH = '' #Put the path to your chromedriver here, for example: C:/Users/*YourUsernameHere*/Desktop/chromedriver.exe
 
-# There is definitely potential to refactor all the code below, but I'm lazy as all hell since I have to code for a living as well.
+# There is definitely potential to refactor all the code below, but I'm lazy as all hell at the moment.
 # START COSTCO
 options = Options()
 options.headless = False
