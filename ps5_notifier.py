@@ -46,9 +46,10 @@ def send_email(stock, status, url, e_password, seller):
 
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             server.login(sender_email, password)
+            # Email
             server.sendmail(sender_email, receiver_email, message)
 
-            #First Text
+            # Text Messaging
             msg = MIMEMultipart()
             sms_gateway_1 = '@txt.att.net' #put your att phone number before the @ symbol
             msg['From'] = sender_email
@@ -62,34 +63,6 @@ def send_email(stock, status, url, e_password, seller):
             sms = msg.as_string()
             server.sendmail(sender_email, sms_gateway_1, sms)
 
-            #Second Text
-            msg = MIMEMultipart()
-            sms_gateway_2 = '@vtext.com' #put your verizon phone number before the @ symbol
-            msg['From'] = sender_email
-            msg['To'] = sms_gateway_2
-            # Make sure you add a new line in the subject
-            msg['Subject'] = "Subject: PS5 in stock at {}!\n".format(seller)
-            # Make sure you also add new lines to your body
-            body = "PS5 {} at {}.".format(stock, url)
-            # and then attach that body furthermore you can also send html content.
-            msg.attach(MIMEText(body, 'plain'))
-            sms = msg.as_string()
-            server.sendmail(sender_email, sms_gateway_2, sms)
-
-            #Third Text
-            msg = MIMEMultipart()
-            sms_gateway_3 = '@tmomail.net' #put your tmobile phone number before the @ symbol
-            msg['From'] = sender_email
-            msg['To'] = sms_gateway_3
-            # Make sure you add a new line in the subject
-            msg['Subject'] = "Subject: PS5 in stock at {}!\n".format(seller)
-            # Make sure you also add new lines to your body
-            body = "PS5 {} at {}.".format(stock, url)
-            # and then attach that body furthermore you can also send html content.
-            msg.attach(MIMEText(body, 'plain'))
-            sms = msg.as_string()
-            server.sendmail(sender_email, sms_gateway_3, sms)
-
 
 url_target = 'https://www.target.com/p/playstation-5-console/-/A-81114595?clkid=de251659N4bdd11eb8a0142010a246cc4&lnm=81938&afid=Future%20PLC.&ref=tgt_adv_xasd0002'
 url_bb = 'https://www.bestbuy.com/site/playstation-5/playstation-5-packages/pcmcat1588107358954.c?irclickid=wCqWhtwKpxyLUxN0UfQwQyYMUkEymrWV1xIEXM0&irgwc=1&ref=198&loc=Narrativ&acampID=0&mpid=376373'
@@ -99,7 +72,7 @@ url_sony = 'https://direct.playstation.com/en-us/consoles/console/playstation5-c
 
 DRIVER_PATH = '' #Put the path to your chromedriver here, for example: C:/Users/*YourUsernameHere*/Desktop/chromedriver.exe
 
-# There is potential to refactor all the code below, but I'm lazy as all hell since I have to code for a living as well.
+# There is definitely potential to refactor all the code below, but I'm lazy as all hell since I have to code for a living as well.
 # START COSTCO
 options = Options()
 options.headless = False
