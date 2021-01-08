@@ -17,9 +17,11 @@ def send_email(stock, status, url, e_password, seller):
     stock = in_stock
     status = in_status
     url = whatever url we are currently iterating through
+    e_password = email_password
+    seller = place you are looking to get the PS5 from
 
-    Reference for all carriers for text messages
     SMS Gateways for each Carrier
+
     AT&T: [number]@txt.att.net
     Sprint: [number]@messaging.sprintpcs.com or [number]@pm .sprint.com
     T-Mobile: [number]@tmomail.net
