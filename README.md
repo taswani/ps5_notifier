@@ -15,7 +15,7 @@ You will need to also enter in an email address and password for gmail, that you
   
 Lastly, you will need to enter in the email addresses and phone numbers that you wish to send these emails and text messages out to, as well as their corresponding carrier, as I have also provided a reference guide for all the different carriers possible.  
   
-You will also need to input the chromedriver path on your computer to the script before you run it. 
+Since this script uses selenium (for automation), unfortunately you will also need to input the chromedriver path on your computer to the script before you run it. Here is a link to the [chromedrivers](https://chromedriver.chromium.org/downloads). Download the one relevant to your chrome browsers version, and use the path for the script.
 
 ## Automation using Windows Task Scheduler
 
